@@ -77,5 +77,55 @@ Serviços gerenciados na nuvem ajudam a reduzir custos, pois evitam a necessidad
 
 🔹 Utilize **serviços gerenciados** para reduzir custos e aumentar a eficiência operacional.  
 
+# Aula 10/03/25 – Infraestrutura e Segurança na AWS  
+
+## 📌 Infraestrutura da AWS  
+
+- **Região da AWS**: Área geográfica que contém várias infraestruturas de computação.  
+  - No Brasil, a região disponível é **southamerica-1** (São Paulo).  
+
+- **AZ (Zona de Disponibilidade)**:  
+  - São grupos de um ou mais **data centers** dentro de uma região.  
+  - Em **São Paulo**, existem **três AZs**.  
+
+- **Local Zone**:  
+  - Funciona de forma semelhante a uma AZ, mas tem menor capacidade.  
+  - Na América do Sul, há uma em **Buenos Aires, Argentina**.  
+
+- **Diferença entre AZ e Local Zone**:  
+  - Ambas oferecem serviços semelhantes, mas a **Local Zone é menor**.  
+
+- **Edge Location**:  
+  - São **pontos de presença (PoP)** que melhoram a entrega de conteúdos e serviços.  
+  - Existem **mais de 700** espalhados pelo mundo.  
+
+---
+
+## 🔒 Segurança de Acesso  
+
+### 🔹 **Modelo de Responsabilidade Compartilhada da AWS**  
+- A **AWS** é responsável pela **segurança da nuvem** (infraestrutura, servidores, rede).  
+- O **cliente** é responsável pela **segurança dentro da nuvem** (configurações, permissões, dados).  
+
+### 🔹 **Tipos de Serviço e Segurança**  
+- **IaaS (Infraestrutura como Serviço)** → Exemplo: **EC2 (servidores virtuais)**.  
+- **SaaS (Software como Serviço)** → Exemplo: **S3 (armazenamento de objetos)** com criptografia **SSE-S3**.  
+
+### 🔹 **Proteção contra Ataques**  
+- Ataques como **vírus trojan** podem sequestrar dados.  
+- Métodos de criptografia ajudam a proteger informações:  
+  - **SSE-C**  
+  - **SSE-S3**  
+  - **SSE-KMS**  
+
+### 🔹 **Gerenciamento de Permissões**  
+- Os usuários devem receber **apenas as permissões necessárias** para suas funções.  
+- Isso evita acessos desnecessários e reduz riscos de segurança.  
+
+---
+
+📌 *Material de estudo baseado na aula de 10/03/25.*  
+
+
 
 
