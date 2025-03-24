@@ -124,7 +124,40 @@ Serviços gerenciados na nuvem ajudam a reduzir custos, pois evitam a necessidad
 
 ---
 
-📌 *Material de estudo baseado na aula de 10/03/25.*  
+# 📚 Aula 17/03 – Policies, Permissões e Armazenamento na AWS  
+
+## 🔑 Diferentes Policies e Permissões  
+
+### ✅ **Policy de Recurso**  
+- Define permissões diretamente em um recurso específico.  
+- **Exemplo**: No **S3**, é possível criar uma policy no **bucket**, permitindo ou negando acessos.  
+- Permite um controle **mais granular** das permissões.  
+
+### ⚖ **Diferença entre Policy de Identidade vs. Policy de Recurso**  
+| Tipo de Policy       | Aplicação                                      | Característica |
+|----------------------|-----------------------------------------------|---------------|
+| **Policy de Identidade** | Aplicada a usuários, grupos ou roles do IAM. | Contém `"Principal": {}`. |
+| **Policy de Recurso**  | Aplicada diretamente ao recurso (exemplo: S3). | **Não** contém `"Principal": {}`. |
+
+### 🔄 **Ordem de Avaliação das Permissões na AWS**  
+1. **A AWS reúne todas as policies** associadas ao usuário.  
+2. **Primeiro, verifica os "Deny"** explícitos.  
+3. **Depois, verifica os "Allow"**.  
+4. **Por padrão, tudo que não está citado é negado (Implicit Deny)**.  
+
+---
+
+## 💾 Armazenamento em Blocos  
+
+### 📂 **Principais tipos de storage na AWS**  
+- **EBS (Elastic Block Store)** → Armazenamento de **blocos** para instâncias EC2.  
+- **EFS (Elastic File System)** → Armazenamento **de arquivos**, escalável e compartilhado.  
+- **FSx** → Armazenamento otimizado para **Windows e Lustre**.  
+- **S3 (Simple Storage Service)** → Armazenamento de **objetos**.  
+
+---
+
+
 
 
 
