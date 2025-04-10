@@ -166,3 +166,90 @@
 - **S3 (Simple Storage Service)** → Armazenamento de **objetos**.  
 
 ---
+
+# 📚 Aula – 24/03/25 – Armazenamento e Segurança no S3
+
+## 💾 Configuração de Armazenamento no S3  
+- É essencial **definir regras de ciclo de vida** desde o início.  
+- Caso contrário, **os dados podem se acumular** e gerar **altos custos**.  
+- Exemplo de regra útil:  
+  - **Mover automaticamente** arquivos para classes de armazenamento mais baratas.  
+  - **Excluir** objetos antigos após determinado período.
+
+> ⚠️ *“Defina uma regra cedo, senão vai dar merda.”*  
+
+---
+
+## 🕓 Versionamento no S3  
+- Por padrão, o **versionamento não vem habilitado**.  
+- Uma vez **ativado**, **não é possível desativar** (apenas suspender).  
+- Ao **alterar ou excluir** um objeto, o S3 **cria uma nova versão** em vez de sobrescrever.  
+- Isso impacta diretamente no **custo**, pois **todas as versões são armazenadas**.
+
+---
+
+## 🔐 Configurações Padrões de Segurança no S3  
+
+### 🛡 Server-side Encryption  
+- A **AWS realiza a criptografia** dos dados **automaticamente**, no lado do servidor.  
+- Tipos comuns:  
+  - **SSE-S3**  
+  - **SSE-KMS**  
+  - **SSE-C**
+
+### 🔑 Client-side Encryption  
+- A **criptografia é feita pelo cliente**, antes do envio para o S3.  
+- O cliente também é responsável por **gerenciar as chaves** de criptografia.  
+
+---
+
+# 📚 Aula – 03/04/25 – Amazon EC2
+
+## 🖥️ Amazon EC2  
+- Serviço de computação escalável baseado em **máquinas virtuais**.  
+- É possível utilizar EC2 para **rodar funções Lambda**, embora essa não seja a prática mais comum (Lambda é serverless, EC2 não).  
+- Flexível, com suporte a múltiplos sistemas operacionais, tipos de instância e configurações de rede.
+
+---
+
+## 📦 Armazenamento Efêmero – Instance Store  
+- O **armazenamento efêmero** é chamado de **Instance Store**.  
+- Armazenamento **local**, anexado fisicamente ao host da instância.  
+- ⚠️ **Dados são perdidos** se a instância for interrompida, parada ou terminada.  
+- Ideal para dados temporários, como:  
+  - **Cache**  
+  - **Dados de sessão**  
+  - **Arquivos de processamento temporário**
+
+---
+
+# 📚 Aula – 07/04/25 – Armazenamento e Banco de Dados na AWS
+
+## 📂 Amazon FSx  
+- Serviço de armazenamento gerenciado que oferece sistemas de arquivos otimizados.  
+- O **Amazon FSx for Windows File Server** trabalha com **NTFS**, o mesmo sistema de arquivos usado em servidores Windows.  
+- Ideal para **aplicações que precisam de compatibilidade com Windows**, como:  
+  - Active Directory  
+  - Permissões NTFS  
+  - Aplicações corporativas legadas
+
+---
+
+## 💾 Amazon EBS (Elastic Block Store)  
+- Oferece armazenamento em **blocos persistente** para instâncias EC2.  
+- Diferente do **Instance Store**, os dados do EBS **persistem mesmo após a instância ser desligada**.  
+- Ideal para:  
+  - **Sistemas operacionais**  
+  - **Bancos de dados**  
+  - **Aplicações que exigem alta durabilidade dos dados**
+
+---
+
+## 🛢️ Reserved Instances no RDS  
+- O **Amazon RDS** permite reservar instâncias para economizar custos a longo prazo.  
+- As **Reserved Instances (RI)** oferecem **descontos significativos** em comparação com instâncias sob demanda.  
+- Períodos comuns: **1 ano ou 3 anos**.  
+- Ideal para aplicações **com carga previsível e uso contínuo**.
+
+---
+
