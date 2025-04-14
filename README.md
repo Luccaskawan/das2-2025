@@ -253,3 +253,26 @@
 
 ---
 
+# 📚 Aula – 10/04/25 – Considerações sobre Bancos de Dados
+
+## 📈 Database Considerations  
+- Ao escolher um banco de dados, é importante considerar:  
+  - **Escalabilidade**: Capacidade de crescer com a demanda.  
+  - **Requisitos de espaço**: Volume de dados esperado.  
+  - **Características dos dados**: Estrutura fixa ou variável.  
+  - **Durabilidade**: Garantia de que os dados serão preservados com segurança.
+
+---
+
+## 🏛️ Banco de Dados Relacional vs Não Relacional  
+
+### 🗂 Relacional  
+- Estrutura baseada em **tabelas com esquemas fixos**.  
+- É necessário **definir os campos e tipos de dados** com antecedência.  
+- Ideal para dados **estruturados e com relações claras**.
+
+### 📦 Não Relacional  
+- **Não exige campos definidos**, podendo inclusive conter **valores vazios**
+
+---
+
