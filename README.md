@@ -276,3 +276,42 @@
 
 ---
 
+# 📚 Aula – 08/05/25 – Redes, Segurança e VPC na AWS
+
+## 🌐 VPC e Subnets Privadas  
+- A **VPC (Virtual Private Cloud)** permite criar uma rede isolada na AWS.  
+- Dentro da VPC, é possível configurar **subnets públicas e privadas**.  
+- **Subnets privadas** **não têm acesso direto à internet**, aumentando a segurança.  
+
+---
+
+## 🌐 Conectando Subnet Privada à Internet  
+- Para permitir que uma subnet privada acesse a internet:  
+  - Usar um **NAT Gateway** em uma subnet pública.  
+  - Em ambientes de alta disponibilidade, utilizar **duplo NAT Gateway** (um por zona de disponibilidade).  
+- O tráfego sai da subnet privada, passa pelo NAT e então vai à internet.
+
+---
+
+## 🔐 Security Groups e Network ACL  
+- **Security Groups**:  
+  - Atuando como **firewall virtual** para instâncias.  
+  - Funcionam com **regras de entrada e saída baseadas em permissões por instância**.  
+  - **Stateful**: se o tráfego de entrada é permitido, o de saída correspondente também é.
+
+- **Network ACL (Access Control List)**:  
+  - Aplicada ao **nível da subnet**.  
+  - Controla **tráfego de entrada e saída** com regras **explícitas** de **allow/deny**.  
+  - **Stateless**: cada direção precisa de regras específicas.
+
+---
+
+## 🔥 AWS Network Firewall  
+- Serviço gerenciado de firewall para proteção de redes dentro da VPC.  
+- Oferece:  
+  - **Filtragem de tráfego baseada em regras personalizadas**.  
+  - **Inspeção profunda de pacotes (DPI)**.  
+  - **Controle de aplicações e domínios acessados**.  
+- Ideal para redes que exigem **monitoramento e controle avançado de segurança**.
+
+---
