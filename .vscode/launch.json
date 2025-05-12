@@ -8,9 +8,10 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "env": {
-                "MY_ENV_VARIABLE": "valor_exemplo",
-                "MY_ENV_VARIABLE": "valor_exemplo"
-            }
+                "AWS_ACCESS_KEY_ID": "",
+                "AWS_SECRET_ACCESS_KEY": ""
+            },
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
