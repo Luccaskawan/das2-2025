@@ -315,3 +315,48 @@
 - Ideal para redes que exigem **monitoramento e controle avançado de segurança**.
 
 ---
+ 
+# 📚 Aula – 16/06/25 – Load Balancer e DNS na AWS
+
+## ⚖️ Load Balancer e Suas Variações  
+- O **Load Balancer** distribui o tráfego entre múltiplos destinos (instâncias, IPs, containers).  
+- Tipos principais na AWS:  
+
+### 🌐 Application Load Balancer (ALB)  
+- Atua na **camada 7 (HTTP/HTTPS)**.  
+- Permite **roteamento baseado em URL, host ou headers**.  
+- Ideal para **aplicações web** e microsserviços.
+
+### 🌐 Network Load Balancer (NLB)  
+- Atua na **camada 4 (TCP/UDP)**.  
+- Suporta **alta performance e baixa latência**.  
+- Indicado para sistemas que precisam de **milhões de conexões por segundo**.
+
+### 🌐 Gateway Load Balancer (GLB)  
+- Usado para integrar **appliances virtuais** de terceiros.  
+- Ideal para **firewalls, sistemas de inspeção ou segurança avançada**.  
+- Trabalha com tráfego encapsulado (**GWLBe**).
+
+### 🌐 Classic Load Balancer (CLB)  
+- Suporta **camada 4 e 7**, mas é **legado**.  
+- Substituído pelo **ALB e NLB** em novos projetos.  
+- Ainda usado em **ambientes antigos**.
+
+---
+
+## 🧩 Componentes do Load Balancer  
+- **Listeners**: portas que recebem o tráfego de entrada (ex: 80, 443).  
+- **Target Groups**: conjunto de destinos que receberão o tráfego.  
+- **Health Checks**: verificações periódicas para garantir que os destinos estão ativos.  
+
+---
+
+## 🌍 DNS na AWS  
+- O **DNS (Domain Name System)** traduz nomes de domínio em endereços IP.  
+- A AWS oferece o **Route 53**, serviço gerenciado de DNS com:  
+  - **Alta disponibilidade**  
+  - **Balanceamento geográfico**  
+  - **Failover automático**  
+- O DNS é responsável por redirecionar os acessos para o **load balancer**.
+
+---
