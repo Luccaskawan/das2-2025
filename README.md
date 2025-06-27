@@ -360,3 +360,29 @@
 - O DNS é responsável por redirecionar os acessos para o **load balancer**.
 
 ---
+
+## 🔗 Redução de Acoplamento em Sistemas
+
+- Reduzir o **acoplamento** facilita a **manutenção**, a **escalabilidade** e a **resiliência** do sistema.  
+- Um sistema bem desacoplado permite **alterações em módulos isolados** sem afetar o restante da aplicação.
+
+### 🛠 Estratégias para Reduzir Acoplamento
+
+- **Load Balancer**  
+  - Distribui o tráfego entre instâncias.  
+  - Ajuda na escalabilidade, mas não separa a lógica entre componentes.
+
+- **Módulos (quase microserviços)**  
+  - Partes do sistema com responsabilidades isoladas.  
+  - Reduzem dependências diretas, mas ainda compartilham recursos.
+
+- **Microserviços**  
+  - Arquitetura onde cada serviço é totalmente independente.  
+  - Cada um possui sua lógica, banco de dados e ciclo de vida próprios.
+
+- **📣 Publish/Subscribe Messaging**  
+  - Comunicação via troca de mensagens assíncronas.  
+  - Um componente “publica” uma mensagem; os demais “assinam” se desejarem responder.  
+  - Permite **comunicação desacoplada**, ideal para arquiteturas distribuídas.
+
+> ✅ **Combinar microserviços com Publish/Subscribe** é uma das formas mais eficientes de reduzir acoplamento em sistemas modernos.
